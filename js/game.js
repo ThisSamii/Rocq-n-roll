@@ -15,6 +15,11 @@ document.addEventListener('touchstart', () => {
     bullets.push({ x: player.x + 20, y: player.y, w: 10, h: 20 });
 });
 
+// 🟢 Warte, bis das Bild fertig geladen ist, dann starte das Spiel
+playerImg.onload = () => {
+    update();
+};
+
 function update() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.drawImage(playerImg, player.x, player.y, player.w, player.h);
@@ -28,5 +33,3 @@ function update() {
 
     requestAnimationFrame(update);
 }
-
-update();
