@@ -1,1 +1,1 @@
-console.log('Spiel-Logik wird geladen');
+console.log('Tyler Level gestartet');
